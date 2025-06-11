@@ -86,7 +86,15 @@ Distributed under the **Apache License 2.0**. See `LICENSE` for more information
 This application is developed **strictly for educational purposes** to demonstrate AI chat capabilities and mobile development techniques. Use responsibly and in compliance with all applicable laws and regulations.
 
 ---
+## Support Me ☕
+If you like my work and want to support me, you can buy me a coffee:
+
+<p align="left">
+  <a href="https://buymeacoffee.com/darshan7017" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px; width: 217px;" >
+  </a>
+</p>
 
 <div align="center">
-  <p>Made with ❤️ for the React Native community</p>
+  <p>Made with ❤️ for the India</p>
 </div>
