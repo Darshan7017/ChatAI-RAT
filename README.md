@@ -50,10 +50,10 @@
 git clone https://github.com/Darshan7017/ChatAI-RAT.git
 
 # Navigate to project directory
-cd darshan-ai-chat
+cd ChatAI-RAT
 
 # Install dependencies
-npm install
+pnpm install
 # or
 yarn install
 
