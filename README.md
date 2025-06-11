@@ -47,7 +47,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/darshan-ai-chat.git
+git clone https://github.com/Darshan7017/ChatAI-RAT.git
 
 # Navigate to project directory
 cd darshan-ai-chat
