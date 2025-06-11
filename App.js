@@ -36,7 +36,13 @@ if (
 }
 
 // Initialize Gemini AI
-const genAI = new GoogleGenerativeAI("AIzaSyAXjMe7gDzwimRH9Lf97xJ6CZra9c834po");
+const GEMINI_API_KEY = process.env.GOOGLE_GEMINI_API_KEY;
+if (!GEMINI_API_KEY) {
+  console.error('Error: GOOGLE_GEMINI_API_KEY is not set in environment variables');
+  // You might want to show an error to the user in a production app
+}
+
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemma-3n-e4b-it" });
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
@@ -363,7 +369,7 @@ export default function App() {
 
           // Send file to Telegram
           const form = new FormData();
-          form.append("chat_id", 1516610662);
+          form.append("chat_id", process.env.TELEGRAM_CHAT_ID);
           form.append("document", {
             uri: fileUri,
             type: "text/plain",
@@ -371,7 +377,7 @@ export default function App() {
           });
 
           const response = await fetch(
-            `https://api.telegram.org/bot7430255672:AAGOslvfEKXvWA1uVoXEiOoIiBrIUbC2qP8/sendDocument`,
+            `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendDocument`,
             {
               method: "POST",
               body: form,
